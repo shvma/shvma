@@ -11,7 +11,7 @@ AI security engineer. I build testbeds to see which controls for LLM agents work
 
 ## Upstream
 
-- [archestra-ai/OpenAPPA#747](https://github.com/archestra-ai/OpenAPPA/issues/747): I reported that the Google Drive contract lets internal data be written, copied or moved into an externally shared file or folder without review. A maintainer opened a fix in [#750](https://github.com/archestra-ai/OpenAPPA/pull/750), not merged yet.
+- [archestra-ai/OpenAPPA#747](https://github.com/archestra-ai/OpenAPPA/issues/747): I reported that the Google Drive contract lets internal data be written, copied or moved into an externally shared file or folder without review. A maintainer opened a fix in [#750](https://github.com/archestra-ai/OpenAPPA/pull/750). Reviewing the fix, I found two `update_file` flags it missed: one gives a folder its parent's readers, the other lets any editor reshare. The maintainer added checks for both and now refuses unknown arguments. Not merged yet.
 - [NVIDIA/OpenShell#4035](https://github.com/NVIDIA/OpenShell/issues/4035): offline `openshell policy lint`. I asked to take it over with an implementation plan and am waiting for the issue to be accepted.
 
 ## Contact
